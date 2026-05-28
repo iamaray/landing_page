@@ -1,2 +1,2 @@
-# landing_page
+# Landing Page
 My personal landing page.
