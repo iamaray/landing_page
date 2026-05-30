@@ -1,11 +1,38 @@
 import Image from "next/image";
-
-
+import { CustomItemList } from "@/components/CustomItemListLayout";
+import ExternalLinkItem from "@/components/ExternalLinkItem";
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"></main>
-    </div>
+    <section className="flex flex-col">
+      <div className="w-full">
+        <h1 className="text-4xl tracking-tight text-black">Arya Nahri</h1>
+        <p className="mt-2 max-w-3xl text-neutral-700">
+          My Startup, Social Profiles, and Projects
+        </p>
+      </div>
+
+      <div className="mt-6 w-full">
+        <CustomItemList>
+          <ExternalLinkItem
+            href=""
+            siteName="GraphonMarkets (My Startup)"
+            icon="icon1"
+          />
+
+          <ExternalLinkItem 
+          href="" 
+          siteName="GitHub" 
+          icon="icon2" 
+          />
+
+          <ExternalLinkItem 
+          href="" 
+          siteName="LinkedIn"
+          icon="icon3" 
+          />
+          
+        </CustomItemList>
+      </div>
+    </section>
   );
 }
