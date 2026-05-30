@@ -5,5 +5,5 @@ type ListProps = {
 };
 
 export function CustomItemList({ children }: ListProps) {
-  return <ul className="flex flex-col gap-1">{children}</ul>;
+  return <ul className="flex flex-col gap-1 mt-6">{children}</ul>;
 }

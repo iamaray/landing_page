@@ -16,10 +16,9 @@ export default function RootLayout({
     <html lang="en" className="bg-white">
       <body className="">
         <TopNav />
-        <main className="mx-auto max-w-4xl px-6 py-10 bg-white">
-          <div className="">
-            {children}
-          </div>
+        <main className="flex flex-col gap-2 mx-auto max-w-4xl px-6 py-10 bg-white">
+          <p className="text-black font-bold">ARYA NAHRI</p>
+          <div className="">{children}</div>
         </main>
       </body>
     </html>
