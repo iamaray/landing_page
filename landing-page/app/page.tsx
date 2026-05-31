@@ -1,5 +1,7 @@
 import { CustomItemList } from "@/components/CustomItemListLayout";
 import ExternalLinkItem from "@/components/ExternalLinkItem";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 export default function Home() {
   return (
     <section className="flex flex-col">
@@ -14,12 +16,12 @@ export default function Home() {
         <ExternalLinkItem
           href=""
           siteName="GraphonMarkets (My Startup)"
-          icon="icon1"
+          Icon={FaGithub}
         />
 
-        <ExternalLinkItem href="" siteName="GitHub" icon="icon2" />
+        <ExternalLinkItem href="" siteName="GitHub" Icon={FaGithub} />
 
-        <ExternalLinkItem href="" siteName="LinkedIn" icon="icon3" />
+        <ExternalLinkItem href="" siteName="LinkedIn" Icon={FaLinkedin} />
       </CustomItemList>
 
       {/* <div className="mt-6 w-full">

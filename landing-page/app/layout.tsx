@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import TopNav from "@/components/TopNav";
+import TopNavBar from "@/components/TopNavLayout";
 
 export const metadata: Metadata = {
   title: "Arya Nahri",
@@ -15,9 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-white">
       <body className="">
-        <TopNav />
+        <TopNavBar />
         <main className="flex flex-col gap-2 mx-auto max-w-4xl px-6 py-10 bg-white">
-          <p className="text-black font-bold">ARYA NAHRI</p>
           <div className="">{children}</div>
         </main>
       </body>
