@@ -13,11 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-white">
-      <body className="">
+    <html lang="en" className="bg-background">
+      <body>
         <TopNavBar />
-        <main className="flex flex-col gap-2 mx-auto max-w-4xl px-6 py-10 bg-white">
-          <div className="">{children}</div>
+        <main className="mx-auto flex max-w-4xl flex-col px-6 py-12">
+          <div>{children}</div>
         </main>
       </body>
     </html>

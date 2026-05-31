@@ -1,4 +1,5 @@
-import { fetchPost, fetchSlugs } from "@/lib/blog";
+import { fetchPost, fetchSlugs, formatPostDate } from "@/lib/blog";
+
 
 type BlogPageProps = {
   params: Promise<{
@@ -37,21 +38,19 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
   );
 
   return (
-    <article className="text-black">
+    <article className="text-foreground">
       <header className="mb-10">
-        <h1 className="text-4xl tracking-tight">{metadata.title}</h1>
+        <h1 className="text-page-title font-semibold tracking-tight">
+          {metadata.title}
+        </h1>
 
-        <p className="mt-3 text-sm text-neutral-500">
-          {new Date(metadata.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
+        <p className="mt-3 text-sm text-muted">{formatPostDate(metadata.date)}</p>
+
+        <p className="mt-4 max-w-3xl text-lg leading-8 text-muted">
+          {metadata.description}
         </p>
-
-        <p className="mt-4 text-lg text-neutral-700">{metadata.description}</p>
       </header>
-      <div className="prose max-w-none">
+      <div className="max-w-none">
         <Post />
       </div>
     </article>

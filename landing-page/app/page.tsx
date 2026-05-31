@@ -1,18 +1,15 @@
-import { CustomItemList } from "@/components/CustomItemListLayout";
 import ExternalLinkItem from "@/components/ExternalLinkItem";
+import ItemList from "@/components/ItemList";
+import PageHeader from "@/components/PageHeader";
+import PageSection from "@/components/PageSection";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <section className="flex flex-col">
-      <div className="w-full">
-        <h1 className="text-4xl tracking-tight text-black">
-          My Startup, Socials, and Projects.
-        </h1>
-        {/* <p className="mt-2 max-w-3xl text-black"></p> */}
-      </div>
+    <PageSection>
+      <PageHeader title="My Startup, Socials, and Projects." />
 
-      <CustomItemList>
+      <ItemList>
         <ExternalLinkItem
           href=""
           siteName="GraphonMarkets (My Startup)"
@@ -22,10 +19,7 @@ export default function Home() {
         <ExternalLinkItem href="" siteName="GitHub" Icon={FaGithub} />
 
         <ExternalLinkItem href="" siteName="LinkedIn" Icon={FaLinkedin} />
-      </CustomItemList>
-
-      {/* <div className="mt-6 w-full">
-      </div> */}
-    </section>
+      </ItemList>
+    </PageSection>
   );
 }

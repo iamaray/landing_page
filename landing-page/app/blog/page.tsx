@@ -1,5 +1,7 @@
-import { CustomItemList } from "@/components/CustomItemListLayout";
 import BlogListItem from "@/components/BlogListItem";
+import ItemList from "@/components/ItemList";
+import PageHeader from "@/components/PageHeader";
+import PageSection from "@/components/PageSection";
 import { fetchPosts } from "@/lib/blog";
 
 export const metadata = {
@@ -11,23 +13,20 @@ export default async function BlogPage() {
   const posts = await fetchPosts();
 
   return (
-    <section className="flex flex-col">
-      <div>
-        <h1 className="text-4xl tracking-tight text-black">Blog</h1>
-        <p className="mt-2 max-w-3xl text-black">Math and Development Logs.</p>
-      </div>
+    <PageSection>
+      <PageHeader title="Blog" description="Math and Development Logs." />
 
-      <CustomItemList>
+      <ItemList>
         {posts.map((post) => (
-            <BlogListItem
-                key={post.slug}
-                postLink={`/blog/${post.slug}`}
-                postTitle={post.metadata.title}
-                postSnippet={post.metadata.description}
-                postDate={post.metadata.date}
-            />
+          <BlogListItem
+            key={post.slug}
+            postLink={`/blog/${post.slug}`}
+            postTitle={post.metadata.title}
+            postSnippet={post.metadata.description}
+            postDate={post.metadata.date}
+          />
         ))}
-      </CustomItemList>
-    </section>
+      </ItemList>
+    </PageSection>
   );
 }

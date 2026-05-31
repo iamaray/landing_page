@@ -12,8 +12,7 @@ export default function TopNav() {
   const pathname = usePathname();
 
   return (
-    // <header className="flex border-b border-neutral-500 bg-white px-6">
-    <div className="flex gap-6">
+    <div className="flex gap-5">
       {navItems.map((item) => {
         const isActive = pathname == item.href;
 
@@ -23,23 +22,14 @@ export default function TopNav() {
             href={item.href}
             className={
               isActive
-                ? "underline underline-offset-2 text-black"
-                : "text-black"
+                ? "text-foreground underline underline-offset-4"
+                : "text-muted transition-colors hover:text-foreground"
             }
           >
             {item.label}
           </Link>
         );
       })}
-
-      {/* <Link href="/" className="hover:underline text-black">
-          HOME
-        </Link>
-
-        <Link href="/blog" className="hover:underline text-black">
-          BLOG
-        </Link> */}
     </div>
-    // </header>
   );
 }
