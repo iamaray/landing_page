@@ -4,10 +4,10 @@ import { useEffect } from "react";
 
 type ErrorPageProps = {
   error: Error & { digest?: string };
-  unstable_retry: () => void;
+  reset: () => void;
 };
 
-export default function ErrorPage({ error, unstable_retry }: ErrorPageProps) {
+export default function ErrorPage({ error, reset }: ErrorPageProps) {
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -18,7 +18,7 @@ export default function ErrorPage({ error, unstable_retry }: ErrorPageProps) {
       <p className="mt-2 text-neutral-600">The blog failed to load.</p>
       <button
         type="button"
-        onClick={() => unstable_retry()}
+        onClick={() => reset()}
         className="mt-4 rounded-md border px-4 py-2"
       >
         Try again

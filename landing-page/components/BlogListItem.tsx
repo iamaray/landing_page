@@ -14,8 +14,11 @@ export default function BlogListItem({
   postSnippet,
 }: CreateBlogListItemArgs) {
   return (
-    <Link href={postLink}>
-      <li className="flex flex-col gap-2 w-full cursor-pointer justify-between border border-black rounded-sm p-3 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
+    <li className="w-full">
+      <Link
+        href={postLink}
+        className="flex flex-col gap-2 w-full cursor-pointer justify-between border border-black rounded-sm p-3 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md"
+      >
         <div className="w-full">
           <p className="text-black text-3xl">{postTitle}</p>
         </div>
@@ -27,8 +30,8 @@ export default function BlogListItem({
         <div>
           <p className="text-black">{postSnippet}</p>
         </div>
-      </li>
-    </Link>
+      </Link>
+    </li>
   );
 }
 

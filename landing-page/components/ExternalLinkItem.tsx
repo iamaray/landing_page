@@ -12,14 +12,17 @@ export default function ExternalLinkItem({
   Icon,
 }: CreateExternalLinkItemArgs) {
   return (
-    <a href={href} className="w-full">
-      <li className="flex w-full cursor-pointer justify-between border border-black rounded-sm p-3 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
+    <li className="w-full">
+      <a
+        href={href}
+        className="flex w-full cursor-pointer justify-between border border-black rounded-sm p-3 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md"
+      >
         <Icon className="h-5 w-5 text-black" aria-hidden="true" />
 
         <div className="">
           <p className="text-black">{siteName}</p>
         </div>
-      </li>
-    </a>
+      </a>
+    </li>
   );
 }
