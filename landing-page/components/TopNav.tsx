@@ -13,7 +13,7 @@ export default function TopNav() {
 
   return (
     // <header className="flex border-b border-neutral-500 bg-white px-6">
-    <nav className="flex gap-6 text-sm bg-white px-6">
+    <nav className="flex gap-6 text-sm bg-white px-6 py-1 border-b border-neutral-300">
       {navItems.map((item) => {
         const isActive = pathname == item.href;
 
@@ -23,7 +23,7 @@ export default function TopNav() {
             href={item.href}
             className={
               isActive
-                ? "underline underline-offset-4 text-black"
+                ? "underline underline-offset-2 text-black"
                 : "text-black"
             }
           >

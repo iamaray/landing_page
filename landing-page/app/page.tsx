@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { CustomItemList } from "@/components/CustomItemListLayout";
 import ExternalLinkItem from "@/components/ExternalLinkItem";
 export default function Home() {
