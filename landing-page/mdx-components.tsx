@@ -2,6 +2,14 @@ import type { MDXComponents } from "mdx/types";
 import Link from "next/link";
 
 const components: MDXComponents = {
+  h1: ({ children, ...props }) => (
+    <h1
+      className="mt-12 text-3xl font-semibold tracking-tight text-foreground"
+      {...props}
+    >
+      {children}
+    </h1>
+  ),
   h2: ({ children, ...props }) => (
     <h2
       className="mt-10 text-section-title font-semibold tracking-tight text-foreground"
@@ -9,6 +17,14 @@ const components: MDXComponents = {
     >
       {children}
     </h2>
+  ),
+  h3: ({ children, ...props }) => (
+    <h3
+      className="mt-8 text-card-title font-semibold tracking-tight text-foreground"
+      {...props}
+    >
+      {children}
+    </h3>
   ),
   p: ({ children, ...props }) => (
     <p className="mt-5 leading-8 text-foreground" {...props}>

@@ -37,10 +37,21 @@ export async function fetchPosts(): Promise<BlogPost[]> {
   const posts = await Promise.all(slugs.map((slug) => fetchPost(slug)));
 
   return posts.sort((a, b) => {
-    return (
-      new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime()
-    );
+    const dateDifference =
+      new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+
+    if (dateDifference !== 0) {
+      return dateDifference;
+    }
+
+    return b.slug.localeCompare(a.slug);
   });
+}
+
+export async function fetchLatestPost(): Promise<BlogPost | null> {
+  const posts = await fetchPosts();
+
+  return posts[0] ?? null;
 }
 
 export function formatPostDate(date: string) {
