@@ -2,15 +2,15 @@
 
 :root,
 :root[data-theme="light"] {
-  --background: #fbfaf8;
-  --foreground: #1d1b18;
-  --surface: #ffffff;
-  --surface-muted: #f5f2ed;
-  --text-muted: #6f675e;
-  --border-subtle: #ded7cc;
-  --accent: #7c4f3f;
+  --background: #fffff8;
+  --foreground: #151515;
+  --surface: #fffff8;
+  --surface-muted: #f7f7ee;
+  --text-muted: #555555;
+  --border-subtle: #c8c8ba;
+  --accent: #164f9f;
   --accent-foreground: #ffffff;
-  --focus-ring: #2563eb;
+  --focus-ring: #164f9f;
 }
 
 @theme inline {
@@ -26,47 +26,44 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-focus-ring: var(--focus-ring);
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: Georgia, "Times New Roman", serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  --text-page-title: 2.25rem;
-  --text-page-title--line-height: 2.5rem;
-  --text-section-title: 1.5rem;
-  --text-section-title--line-height: 2rem;
-  --text-card-title: 1.125rem;
-  --text-card-title--line-height: 1.75rem;
+  --text-page-title: 2rem;
+  --text-page-title--line-height: 2.375rem;
+  --text-section-title: 1.25rem;
+  --text-section-title--line-height: 1.75rem;
+  --text-card-title: 1rem;
+  --text-card-title--line-height: 1.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --background: #11100f;
-    --foreground: #f7f3ed;
-    --surface: #191715;
-    --surface-muted: #24211e;
-    --text-muted: #b8aea3;
-    --border-subtle: #37312b;
-    --accent: #d6a184;
-    --accent-foreground: #17110d;
-    --focus-ring: #93c5fd;
+    --background: #101114;
+    --foreground: #f1f0e8;
+    --surface: #101114;
+    --surface-muted: #191b20;
+    --text-muted: #aaa89f;
+    --border-subtle: #3a3d42;
+    --accent: #8ab4f8;
+    --accent-foreground: #101114;
+    --focus-ring: #8ab4f8;
   }
 }
 
 :root[data-theme="dark"] {
-  --background: #11100f;
-  --foreground: #f7f3ed;
-  --surface: #191715;
-  --surface-muted: #24211e;
-  --text-muted: #b8aea3;
-  --border-subtle: #37312b;
-  --accent: #d6a184;
-  --accent-foreground: #17110d;
-  --focus-ring: #93c5fd;
+  --background: #101114;
+  --foreground: #f1f0e8;
+  --surface: #101114;
+  --surface-muted: #191b20;
+  --text-muted: #aaa89f;
+  --border-subtle: #3a3d42;
+  --accent: #8ab4f8;
+  --accent-foreground: #101114;
+  --focus-ring: #8ab4f8;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  transition:
-    background-color 200ms ease,
-    color 200ms ease;
 }

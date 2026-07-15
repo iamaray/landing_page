@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en" className="bg-background">
       <body>
         <TopNavBar />
-        <main className="mx-auto flex max-w-4xl flex-col px-6 py-12">
+        <main className="mx-auto flex max-w-2xl flex-col px-5 py-8 sm:px-6 sm:py-10">
           <div>{children}</div>
         </main>
       </body>

@@ -28,25 +28,25 @@ export default async function Home() {
       </ItemList>
 
       {latestPost && FeaturedPost ? (
-        <section className="mt-14 border-t border-border pt-10">
+        <section className="mt-10 border-t border-border pt-6">
           <PageHeader title="Featured Blog Post" />
 
-          <article className="mt-6 text-foreground">
+          <article className="mt-5 text-foreground">
             <header>
-              <h3 className="text-3xl font-semibold tracking-tight">
+              <h3 className="text-section-title font-semibold">
                 {latestPost.metadata.title}
               </h3>
 
-              <p className="mt-3 text-sm text-muted">
+              <p className="mt-2 font-mono text-xs text-muted">
                 {formatPostDate(latestPost.metadata.date)}
               </p>
 
-              <p className="mt-4 max-w-3xl text-lg leading-8 text-muted">
+              <p className="mt-3 max-w-3xl leading-7 text-muted">
                 {latestPost.metadata.description}
               </p>
             </header>
 
-            <div className="mt-8">
+            <div className="mt-6">
               <FeaturedPost />
             </div>
           </article>

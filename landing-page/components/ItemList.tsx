@@ -5,5 +5,5 @@ type ItemListProps = {
 };
 
 export default function ItemList({ children }: ItemListProps) {
-  return <ul className="mt-8 flex flex-col gap-3">{children}</ul>;
+  return <ul className="mt-6 flex flex-col gap-2">{children}</ul>;
 }

@@ -16,7 +16,7 @@ export default function ExternalLinkItem({
     <LinkCard>
       <a
         href={href}
-        className="flex w-full items-center gap-4 rounded-md p-4 text-foreground outline-none transition-colors hover:text-accent focus-visible:ring-2 focus-visible:ring-focus-ring/40"
+        className="flex w-full items-center gap-3 p-3 text-foreground outline-none hover:text-accent hover:underline focus-visible:ring-1 focus-visible:ring-focus-ring"
       >
         <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />
 

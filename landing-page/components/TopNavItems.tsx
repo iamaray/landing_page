@@ -12,7 +12,7 @@ export default function TopNav() {
   const pathname = usePathname();
 
   return (
-    <div className="flex gap-5">
+    <div className="flex gap-4">
       {navItems.map((item) => {
         const isActive = pathname == item.href;
 
@@ -23,7 +23,7 @@ export default function TopNav() {
             className={
               isActive
                 ? "text-foreground underline underline-offset-4"
-                : "text-muted transition-colors hover:text-foreground"
+                : "text-muted hover:text-foreground hover:underline hover:underline-offset-4"
             }
           >
             {item.label}

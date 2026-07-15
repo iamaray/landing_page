@@ -19,14 +19,16 @@ export default function BlogListItem({
     <LinkCard>
       <Link
         href={postLink}
-        className="flex w-full flex-col gap-3 rounded-md p-4 outline-none transition-colors focus-visible:ring-2 focus-visible:ring-focus-ring/40"
+        className="flex w-full flex-col gap-2 p-3 outline-none focus-visible:ring-1 focus-visible:ring-focus-ring"
       >
         <div>
-          <p className="text-card-title font-semibold text-foreground group-hover:text-accent">
+          <p className="text-card-title font-semibold text-foreground group-hover:text-accent group-hover:underline">
             {postTitle}
           </p>
 
-          <p className="mt-1 text-sm text-muted">{formatPostDate(postDate)}</p>
+          <p className="mt-1 font-mono text-xs text-muted">
+            {formatPostDate(postDate)}
+          </p>
         </div>
 
         <p className="leading-7 text-muted">{postSnippet}</p>

@@ -39,14 +39,16 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
 
   return (
     <article className="text-foreground">
-      <header className="mb-10">
-        <h1 className="text-page-title font-semibold tracking-tight">
+      <header className="mb-8">
+        <h1 className="text-page-title font-semibold">
           {metadata.title}
         </h1>
 
-        <p className="mt-3 text-sm text-muted">{formatPostDate(metadata.date)}</p>
+        <p className="mt-2 font-mono text-xs text-muted">
+          {formatPostDate(metadata.date)}
+        </p>
 
-        <p className="mt-4 max-w-3xl text-lg leading-8 text-muted">
+        <p className="mt-3 max-w-3xl leading-7 text-muted">
           {metadata.description}
         </p>
       </header>

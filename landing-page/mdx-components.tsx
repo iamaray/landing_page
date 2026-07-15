@@ -4,7 +4,7 @@ import Link from "next/link";
 const components: MDXComponents = {
   h1: ({ children, ...props }) => (
     <h1
-      className="mt-12 text-3xl font-semibold tracking-tight text-foreground"
+      className="mt-10 border-t border-border pt-5 text-2xl font-semibold text-foreground"
       {...props}
     >
       {children}
@@ -12,7 +12,7 @@ const components: MDXComponents = {
   ),
   h2: ({ children, ...props }) => (
     <h2
-      className="mt-10 text-section-title font-semibold tracking-tight text-foreground"
+      className="mt-9 border-t border-border pt-4 text-section-title font-semibold text-foreground"
       {...props}
     >
       {children}
@@ -20,31 +20,48 @@ const components: MDXComponents = {
   ),
   h3: ({ children, ...props }) => (
     <h3
-      className="mt-8 text-card-title font-semibold tracking-tight text-foreground"
+      className="mt-7 text-card-title font-semibold text-foreground"
       {...props}
     >
       {children}
     </h3>
   ),
   p: ({ children, ...props }) => (
-    <p className="mt-5 leading-8 text-foreground" {...props}>
+    <p className="mt-4 leading-7 text-foreground" {...props}>
       {children}
     </p>
   ),
   ul: ({ children, ...props }) => (
-    <ul className="mt-5 list-disc space-y-2 pl-6 text-foreground" {...props}>
+    <ul className="mt-4 list-disc space-y-1 pl-6 text-foreground" {...props}>
       {children}
     </ul>
   ),
   li: ({ children, ...props }) => (
-    <li className="leading-8" {...props}>
+    <li className="leading-7" {...props}>
       {children}
     </li>
   ),
+  blockquote: ({ children, ...props }) => (
+    <blockquote
+      className="mt-5 border-l-2 border-border pl-4 text-muted"
+      {...props}
+    >
+      {children}
+    </blockquote>
+  ),
+  code: ({ children, ...props }) => (
+    <code
+      className="bg-surface-muted px-1 py-0.5 font-mono text-sm text-foreground"
+      {...props}
+    >
+      {children}
+    </code>
+  ),
+  hr: (props) => <hr className="my-8 border-border" {...props} />,
   a: ({ href = "", children, ...props }) => {
     const isInternal = href.startsWith("/");
     const className =
-      "font-medium text-accent underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring/40";
+      "text-accent underline underline-offset-4 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-focus-ring";
 
     if (isInternal) {
       return (

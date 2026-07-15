@@ -52,25 +52,14 @@ export default function ThemeToggle() {
       }
       aria-pressed={isReady ? isDark : undefined}
       onClick={toggleTheme}
-      className="relative ml-auto inline-flex h-8 w-16 shrink-0 items-center rounded-full border border-border bg-surface-muted p-1 text-muted transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring/40"
+      className="ml-auto inline-flex h-7 w-7 shrink-0 items-center justify-center border border-border bg-surface-muted text-muted hover:border-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-focus-ring"
     >
       <span className="sr-only">Toggle color theme</span>
-      <FaSun
-        className="absolute left-2 h-3.5 w-3.5"
-        aria-hidden="true"
-      />
-      <FaMoon
-        className="absolute right-2 h-3.5 w-3.5"
-        aria-hidden="true"
-      />
-      <span
-        className={`flex h-6 w-6 items-center justify-center rounded-full bg-surface text-accent shadow-sm transition-transform duration-200 ${
-          isDark ? "translate-x-8" : "translate-x-0"
-        }`}
-        aria-hidden="true"
-      >
-        {isDark ? <FaMoon className="h-3 w-3" /> : <FaSun className="h-3 w-3" />}
-      </span>
+      {isDark ? (
+        <FaMoon className="h-3.5 w-3.5" aria-hidden="true" />
+      ) : (
+        <FaSun className="h-3.5 w-3.5" aria-hidden="true" />
+      )}
     </button>
   );
 }
